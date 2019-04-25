@@ -22,7 +22,14 @@ namespace ScrabbleSpace
       int score = 0;
       word = word.ToUpper();
       char[] letterList = word.ToCharArray();
-      score += _LetterScoreList[letterList[0]];
+      foreach(char letter in letterList)
+      {
+        if(_LetterScoreList.ContainsKey(letter))
+        {
+          score += _LetterScoreList[letter];
+        }
+      }
+
       return score;
     }
   }

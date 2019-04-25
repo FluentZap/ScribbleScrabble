@@ -20,5 +20,28 @@ namespace ScrabbleTests
       Scrabble scrabble = new Scrabble();
       Assert.AreEqual(4, scrabble.GetWordScore("f"));
     }
+
+    [TestMethod]
+    public void TestWholeWords_InputApple_Return_Nine()
+    {
+      Scrabble scrabble = new Scrabble();
+      Assert.AreEqual(9, scrabble.GetWordScore("apple"));
+      Assert.AreEqual(9, scrabble.GetWordScore("ApPle"));
+    }
+
+    [TestMethod]
+    public void TestSpecialCharacters()
+    {
+      Scrabble scrabble = new Scrabble();
+      Assert.AreEqual(33, scrabble.GetWordScore("H@xz0r3z"));
+    }
+
+
+    [TestMethod]
+    public void TestMultipleWords()
+    {
+      Scrabble scrabble = new Scrabble();
+      Assert.AreEqual(9, scrabble.GetWordScore("Apple Juice"));      
+    }
   }
 }
