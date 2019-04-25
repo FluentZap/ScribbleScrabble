@@ -41,7 +41,14 @@ namespace ScrabbleTests
     public void TestMultipleWords()
     {
       Scrabble scrabble = new Scrabble();
-      Assert.AreEqual(9, scrabble.GetWordScore("Apple Juice"));      
+      Assert.AreEqual(9, scrabble.GetWordScore("Apple Juice"));
+    }
+
+    [TestMethod]
+    public void TestMultipleWordsHyphen()
+    {
+      Scrabble scrabble = new Scrabble();
+      Assert.AreEqual(9, scrabble.GetWordScore("Apple-juice"));      
     }
   }
 }
