@@ -3,17 +3,22 @@ using System;
 using System.Collections.Generic;
 using ScrabbleSpace;
 
-namespace Scrabble.Tests
+namespace ScrabbleTests
 {
   [TestClass]
   public class TestMethods
   {
-    // [TestMethod]
-    // public void TestKeywordSave()
-    // {
-    //   Anagram anagram = new Anagram("bread");
-    //   Assert.AreEqual("bread", anagram.GetKeyWord());
-    // }
-
+    [TestMethod]
+    public void TestSingleLetter_InputF_ReturnFour()
+    {
+      Scrabble scrabble = new Scrabble();
+      Assert.AreEqual(4, scrabble.GetWordScore("F"));
+    }
+    [TestMethod]
+    public void TestSingleLowerLetter_Inputf_ReturnFour()
+    {
+      Scrabble scrabble = new Scrabble();
+      Assert.AreEqual(4, scrabble.GetWordScore("f"));
+    }
   }
 }

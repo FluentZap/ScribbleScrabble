@@ -15,7 +15,7 @@ _This application will take a word and return the amount of points that it is wo
 
 Build a Dictionary with char letter and int score as a lookup table.
 
-Go through BDD and make sure it passes all tests 
+Go through BDD and make sure it passes all tests
 
 Test for incorrect inputs and handle them send error message but still return first word. Convert to lowercase for testing. Hyphens count as a space.
 
@@ -34,8 +34,8 @@ A for loop to check each char in the string and add the score to a value. return
 
 |Behavior|Input|Output|
 |-|-|-|
-|User sends a letter and gets back a score|"f"| 4 |
-|Input a letter and return regardless of case |"F"|4|
+|User sends a letter and gets back a score|"F"| 4 |
+|Input a letter and return regardless of case |"f"|4|
 |Input a string of letters |"apple"|9|
 |Input ignores special characters | "H@xz0r3z"|33|
 |Input stops at a space and only returns the first word| "Apple Juice"|9|
